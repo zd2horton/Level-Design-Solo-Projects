@@ -4,16 +4,6 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    private enum AnimState
-    {
-        IDLE,
-        JUMPING,
-        RUNNING,
-        HALTING,
-        DUCKING,
-        FIRING,
-    }
-
     private float speed, horizontal, vertical, jumpModifier;
     private bool canDoubleJump;
 
@@ -23,7 +13,6 @@ public class PlayerController : MonoBehaviour
     private SpriteRenderer playerRender;
 
     private Animator anim;
-    private AnimState playerState;
 
     void Start()
     {
@@ -44,8 +33,6 @@ public class PlayerController : MonoBehaviour
         horizontal = Input.GetAxis("Horizontal");
         jumpMovement();
         groundedMovement();
-        //CheckState();
-        Debug.Log(anim.GetBool("Running"));
     }
 
     private void jumpMovement()
@@ -56,7 +43,6 @@ public class PlayerController : MonoBehaviour
         {
             Vector2 jumpMovement = new Vector2(playerRigid.velocity.x, jumpModifier);
             playerRigid.velocity = jumpMovement;
-            //playerState = AnimState.JUMPING;
             ToggleAnimState("Jumping");
 
             if (canDoubleJump == true)
@@ -73,8 +59,6 @@ public class PlayerController : MonoBehaviour
 
     private bool PlayerGrounded()
     {
-        //RaycastHit2D checkIfGrounded = Physics2D.Raycast(playerBox.bounds.center, Vector2.down,
-        //    playerBox.bounds.extents.y + 0.1f, groundLayerMask);
         RaycastHit2D checkIfGrounded = Physics2D.BoxCast(playerBox.bounds.center, playerBox.bounds.size,
             0, Vector2.down, 0.1f, groundLayerMask);
         return (checkIfGrounded.collider != null);
@@ -82,79 +66,63 @@ public class PlayerController : MonoBehaviour
 
     private void groundedMovement()
     {
-        if (horizontal > 0)
+        if (Mathf.Abs(horizontal) > 0)
         {
-            playerRender.flipX = false;
+            switch (Mathf.Sign(horizontal))
+            {
+                case 1:
+                    playerRender.flipX = false;
+                    break;
+
+                case -1:
+                    playerRender.flipX = true;
+                    break;
+
+            }
 
             if (PlayerGrounded() == true)
             {
-                //playerState = AnimState.RUNNING;
                 ToggleAnimState("Running");
             }
             else ToggleAnimState("Jumping");
         }
 
-        else if (horizontal < 0)
-        {
-            playerRender.flipX = true;
 
-            if (PlayerGrounded() == true)
+
+        else if (PlayerGrounded() == true && horizontal == 0) //if stationary and grounded
+        {
+            if (vertical < 0) //check for duck state
             {
-                //playerState = AnimState.RUNNING;
-                ToggleAnimState("Running");
+                ToggleAnimState("Ducking");
             }
-            else ToggleAnimState("Jumping");
-        }
 
-        if (Input.GetButton("Run"))
-        {
-            speed = 8.5f;
+            else if (Input.GetButtonDown("Fire1") == true) //check for firing state
+            {
+                ToggleAnimState("Firing");
+            }
 
-            //if (playerState == AnimState.RUNNING)
-            //{
-            //    anim.speed = 2.0f;
-            //}
-        }
-
-        else
-        {
-            speed = 5.0f;
-            anim.speed = 1.0f;
+            else if (vertical == 0 && Input.GetButtonDown("Fire1") == false)
+            {
+                ToggleAnimState("Idle");
+            }
         }
         
+        switch (Input.GetButton("Run"))
+        {
+            case true:
+                speed = 8.5f;
+                anim.speed = 1.5f;
+                break;
+
+            case false:
+                speed = 5.0f;
+                anim.speed = 1.0f;
+                break;
+        }
+
         Vector2 verticalMovement = new Vector2(horizontal * speed, playerRigid.velocity.y);
         playerRigid.velocity = verticalMovement;
     }
-
-    //private void CheckState()
-    //{
-    //    switch (playerState)
-    //    {
-    //        case AnimState.IDLE:
-    //            ToggleAnimState("Idle");
-    //            break;
-
-    //        case AnimState.JUMPING:
-    //            ToggleAnimState("Jumping");
-    //            break;
-
-    //        case AnimState.RUNNING:
-    //            ToggleAnimState("Running");
-    //            break;
-
-    //        case AnimState.HALTING:
-    //            ToggleAnimState("Halting");
-    //            break;
-
-    //        case AnimState.DUCKING:
-    //            ToggleAnimState("Ducking");
-    //            break;
-
-    //        case AnimState.FIRING:
-    //            ToggleAnimState("Firing");
-    //            break;
-    //    }
-    //}
 
     private void ToggleAnimState(string animState)
     {
