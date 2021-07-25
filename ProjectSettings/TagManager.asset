@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Terrain
   - Collectable
+  - Enemy
+  - Fireball
+  - Hurtbox
+  - DeathPlane
   layers:
   - Default
   - TransparentFX
@@ -17,7 +21,7 @@ TagManager:
   - 
   - Ground
   - Player
-  - 
+  - Enemy
   - 
   - 
   - 

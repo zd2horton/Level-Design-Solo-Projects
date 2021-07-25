@@ -6,7 +6,8 @@ using TMPro;
 
 public class PlayerCollectables : MonoBehaviour
 {
-    private int lives, coins;
+    //[HideInInspector]
+    public int lives, coins;
     private TextMeshProUGUI livesText, coinText;
     [SerializeField]
     private Canvas UICanvas;
@@ -19,26 +20,43 @@ public class PlayerCollectables : MonoBehaviour
 
     void Update()
     {
-        
+        livesText.text = lives.ToString();
+        coinText.text = coins.ToString();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Collectable")
         {
-            switch (collision.transform.parent.gameObject.name)
+            if (collision.gameObject.name.Contains("Coin"))
             {
-                case "Lives":
-                    lives++;
-                    livesText.text = lives.ToString();
-                    break;
-
-                case "Coins":
-                    coins++;
-                    coinText.text = coins.ToString();
-                    break;
+                coins++;
+                Destroy(collision.gameObject);
             }
-            Destroy(collision.gameObject);
+
+            else if (collision.gameObject.name.Contains("Life"))
+            {
+                lives++;
+                Destroy(collision.gameObject);
+            }
+
+            else
+            {
+                switch (collision.transform.parent.gameObject.name)
+                {
+                    case "Lives":
+                        lives++;
+                        break;
+
+                    case "Coins":
+                        coins++;
+                        break;
+
+                    default:
+                        break;
+                }
+                Destroy(collision.gameObject);
+            }
         }
     }
 
