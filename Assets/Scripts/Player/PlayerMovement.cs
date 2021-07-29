@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
 {
     private float speed, horizontal, vertical, jumpModifier, fireTimer, wallJumpTimer, previousPlayerDir;
     private bool canDoubleJump, isWallSliding, canWallJump;
+    public bool firePower, jumpPower;
 
     private Rigidbody2D playerRigid;
     private BoxCollider2D playerBox;
@@ -25,6 +26,8 @@ public class PlayerMovement : MonoBehaviour
         previousPlayerDir = 0;
         canDoubleJump = true;
         isWallSliding = false;
+        firePower = false;
+        jumpPower = false;
 
         playerRigid = this.GetComponent<Rigidbody2D>();
         playerBox = this.GetComponent<BoxCollider2D>();
@@ -61,7 +64,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && 
             (PlayerGrounded() == true ||
-            (PlayerGrounded() == false && canDoubleJump == true) || 
+            (PlayerGrounded() == false && canDoubleJump == true && jumpPower == true) || 
             canWallJump == true))
         {
             playerJump();
@@ -203,7 +206,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void FireCheck()
     {
-        if (fireTimer >= 0.85f && Input.GetButtonDown("Fire1"))
+        if (fireTimer >= 0.85f && Input.GetButtonDown("Fire1") && firePower == true)
         {
             int fireXDir = 0;
 

@@ -86,14 +86,14 @@ public class PlayerController : MonoBehaviour
 
             case -1:
                 transform.position = initialPos;
-                GetComponent<PlayerCollectables>().lives--;
+                GetComponent<CollectablesScript>().lives--;
                 health = 3;
                 playerRender.color = Color.green;
                 break;
 
             case 0:
                 transform.position = initialPos;
-                GetComponent<PlayerCollectables>().lives--;
+                GetComponent<CollectablesScript>().lives--;
                 health = 3;
                 playerRender.color = Color.green;
                 break;

@@ -14,7 +14,7 @@ public class BlockScript : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player" && blockHit == false)
+        if (collision.gameObject.tag == "Player" && blockHit == false && collision.GetContact(0).normal.y == 1.0f)
         {
             float posToInstan = transform.position.y + GetComponent<BoxCollider2D>().bounds.extents.y + 0.5f;
             Instantiate(blockContents,
