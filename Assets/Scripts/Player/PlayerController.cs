@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
     private int health;
     private float invincibleTimer;
     private bool invinciblePeriod;
+    public int score, lives, coins;
 
     private Vector2 initialPos;
     private SpriteRenderer playerRender;
@@ -17,6 +19,10 @@ public class PlayerController : MonoBehaviour
         health = 3;
         invincibleTimer = 3;
         invinciblePeriod = false;
+        score = 0;
+        lives = 0;
+        coins = 0;
+
 
         initialPos = transform.position;
         playerRender = GetComponent<SpriteRenderer>();
@@ -66,6 +72,7 @@ public class PlayerController : MonoBehaviour
             {
                 collision.gameObject.GetComponent<EnemyClass>().enemyHP--;
                 GetComponent<PlayerMovement>().playerJump();
+                score += 250;
             }
         }
     }
@@ -86,16 +93,18 @@ public class PlayerController : MonoBehaviour
 
             case -1:
                 transform.position = initialPos;
-                GetComponent<CollectablesScript>().lives--;
+                lives--;
                 health = 3;
                 playerRender.color = Color.green;
+                //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
                 break;
 
             case 0:
                 transform.position = initialPos;
-                GetComponent<CollectablesScript>().lives--;
+                lives--;
                 health = 3;
                 playerRender.color = Color.green;
+                //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
                 break;
 
             case 1:

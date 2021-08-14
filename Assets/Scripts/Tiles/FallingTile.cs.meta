@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 8d22ccfd245d98c4482ee13bd103a97a
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - m_Sprite: {fileID: 4573662275759064063, guid: 497d05c99ca5e744b9198575f701ed89,
+      type: 3}
+  - m_InstancedGameObject: {fileID: 2098550410113069121, guid: 3dd52a0aab0424c42a20db037aa0ebe9,
+      type: 3}
+  - fallingPrefab: {fileID: 2098550410113069121, guid: 3dd52a0aab0424c42a20db037aa0ebe9,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
