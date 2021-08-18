@@ -54,4 +54,17 @@ public class EnemyClass : MonoBehaviour
             enemyXDir *= -1;
         }
     }
+
+    protected void BasicTurn()
+    {
+        RaycastHit2D sideHit = Physics2D.Raycast(
+            enemyCollide.bounds.center,
+            new Vector2(enemyXDir, 0), enemyCollide.bounds.extents.x + 0.1f, groundLayerMask);
+
+        if (sideHit.collider != null)
+        {
+            enemyRender.flipX = !enemyRender.flipX;
+            enemyXDir *= -1;
+        }
+    }
 }

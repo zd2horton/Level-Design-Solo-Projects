@@ -25,11 +25,13 @@ public class TilePlacementScript : MonoBehaviour
         {
             Vector3 worldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             //RaycastHit2D mouseCollision = Physics2D.Raycast(worldPos, Vector2.zero);
+
             Vector3Int cellPos = groundMap.WorldToCell(worldPos);
             //Debug.Log(groundMap.HasTile(cellPos));
             //Debug.Log(groundMap.GetTile(cellPos));
 
-            if (tilesToPlace != null && currentData.usesLeft > 0)
+            if (tilesToPlace != null && currentData.usesLeft > 0 && 
+                GetComponent<EventSystem>().currentSelectedGameObject == null)
             {
                 if (currentData.paletteSlot != 12)
                 {
@@ -95,6 +97,7 @@ public class TilePlacementScript : MonoBehaviour
         else if (Input.GetMouseButtonDown(1))
         {
             tilesToPlace = null;
+            canvasSelect.GetComponent<TextMeshProUGUI>().text = "Currently Selected: Empty";
         }
 
         if (isThis != null) isThis.transform.GetChild(1).GetComponent<Text>().text = currentData.usesLeft.ToString();
