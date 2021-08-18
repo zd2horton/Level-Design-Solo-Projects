@@ -30,8 +30,8 @@ public class TilePlacementScript : MonoBehaviour
             //Debug.Log(groundMap.HasTile(cellPos));
             //Debug.Log(groundMap.GetTile(cellPos));
 
-            if (tilesToPlace != null && currentData.usesLeft > 0 && 
-                GetComponent<EventSystem>().currentSelectedGameObject == null)
+            if (tilesToPlace != null && currentData.usesLeft > 0 &&
+                EventSystem.current.currentSelectedGameObject == null)
             {
                 if (currentData.paletteSlot != 12)
                 {

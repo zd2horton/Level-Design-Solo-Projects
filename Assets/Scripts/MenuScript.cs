@@ -15,4 +15,9 @@ public class MenuScript : MonoBehaviour
         selectedLevel = EventSystem.current.currentSelectedGameObject;
         SceneManager.LoadScene(selectedLevel.gameObject.name);
     }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 }

@@ -45,6 +45,11 @@ public class PlayerController : MonoBehaviour
             Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Enemy"), false);
         }
         //Debug.Log(health);
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene("MenuScene");
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
