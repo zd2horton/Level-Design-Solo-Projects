@@ -16,7 +16,7 @@ public class ExitScript : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             player.GetComponent<PlayerController>().score += 1000;
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            SceneManager.LoadScene("MenuScene");
         }
     }
 }

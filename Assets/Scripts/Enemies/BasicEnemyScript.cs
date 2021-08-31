@@ -27,6 +27,7 @@ public class BasicEnemyScript : EnemyClass
         if (enemyHP > 0)
         {
             BasicEnemyMovement();
+            BasicTurn();
         }
 
         else
