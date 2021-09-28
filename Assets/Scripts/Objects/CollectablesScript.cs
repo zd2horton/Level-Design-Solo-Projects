@@ -37,6 +37,13 @@ public class CollectablesScript : MonoBehaviour
             else if (collision.gameObject.name.Contains("Life")) playerCont.lives++;
             else if (collision.gameObject.name.Contains("Double")) playerMove.jumpPower = true;
             else if (collision.gameObject.name.Contains("Mitt")) playerMove.firePower = true;
+
+            else if (collision.gameObject.name.Contains("Health") && playerCont.health < 3)
+            {
+                playerCont.health++;
+                playerCont.HealthHandler();
+            }
+
             playerCont.score += 200;
 
 

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8d22ccfd245d98c4482ee13bd103a97a, type: 3}
-  m_Name: Treasure Chest
+  m_Name: Block2Mitt
   m_EditorClassIdentifier: 
   m_Sprite: {fileID: 4573662275759064063, guid: 497d05c99ca5e744b9198575f701ed89,
     type: 3}
@@ -36,5 +36,5 @@ MonoBehaviour:
     type: 3}
   m_Flags: 1
   m_ColliderType: 1
-  objectPrefab: {fileID: 1324009705024932137, guid: e8187526154785840ae7c043a7ce05ea,
+  objectPrefab: {fileID: 1324009705024932137, guid: bb6b045f88c4be94ca7f21d5eb226c28,
     type: 3}

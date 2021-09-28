@@ -42,7 +42,6 @@ public class TurtleScript : EnemyClass
 
         if (enemyAnim.GetCurrentAnimatorStateInfo(0).IsName("TurtleExplode"))
         {
-            Debug.Log("EXPLOSION");
             Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Enemy"), false);
             enemyDamage = 2;
 

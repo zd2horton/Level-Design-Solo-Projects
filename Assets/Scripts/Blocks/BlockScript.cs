@@ -17,9 +17,11 @@ public class BlockScript : MonoBehaviour
         if (collision.gameObject.tag == "Player" && blockHit == false && collision.GetContact(0).normal.y == 1.0f)
         {
             float posToInstan = transform.position.y + GetComponent<BoxCollider2D>().bounds.extents.y + 0.5f;
-            Instantiate(blockContents,
+            GameObject newItem = Instantiate(blockContents,
                 new Vector2(transform.position.x, posToInstan), Quaternion.identity);
+            newItem.GetComponent<Rigidbody2D>().gravityScale = 0.15f;
             blockHit = true;
+            Destroy(this.gameObject);
         }
     }
 }

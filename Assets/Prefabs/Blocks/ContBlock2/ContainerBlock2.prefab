@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1324009705024932150}
   - component: {fileID: 1324009705024932151}
   - component: {fileID: 1324009705024932136}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ContainerBlock2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47,6 +47,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -121,4 +122,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f35d60842c3f1642bff858199986863, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blockContents: {fileID: 0}
+  blockContents: {fileID: 2150781299876256596, guid: 3c52911cce14c374092b3502872be637,
+    type: 3}

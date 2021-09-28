@@ -19,9 +19,11 @@ public class BlockScriptVariable : MonoBehaviour
         {
             randNo = Random.Range(0, 4);
             float posToInstan = transform.position.y + GetComponent<BoxCollider2D>().bounds.extents.y + 0.5f;
-            Instantiate(blockContents[randNo],
+            GameObject newItem = Instantiate(blockContents[randNo],
                 new Vector2(transform.position.x, posToInstan), Quaternion.identity);
+            newItem.GetComponent<Rigidbody2D>().gravityScale = 0.15f;
             blockHit = true;
+            Destroy(this.gameObject);
         }
     }
 }

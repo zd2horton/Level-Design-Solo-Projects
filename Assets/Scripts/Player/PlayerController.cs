@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
-    private int health;
+    public int health;
     private float invincibleTimer;
     private bool invinciblePeriod;
     public int score, lives, coins;
@@ -82,35 +82,26 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "DeathPlane")
-        {
-            health = 0;
-            HealthHandler();
-        }
-    }
-
-    private void HealthHandler()
+    public void HealthHandler()
     {
         switch (health)
         {
 
-            case -1:
-                transform.position = initialPos;
-                lives--;
-                health = 3;
-                playerRender.color = Color.green;
-                //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-                break;
+            //case -1:
+            //    //transform.position = initialPos;
+            //    lives--;
+            //    health = 3;
+            //    playerRender.color = Color.green;
+            //    //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            //    break;
 
-            case 0:
-                transform.position = initialPos;
-                lives--;
-                health = 3;
-                playerRender.color = Color.green;
-                //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-                break;
+            //case 0:
+            //    //transform.position = initialPos;
+            //    lives--;
+            //    health = 3;
+            //    playerRender.color = Color.green;
+            //    //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            //    break;
 
             case 1:
                 playerRender.color = Color.red;
@@ -118,6 +109,10 @@ public class PlayerController : MonoBehaviour
 
             case 2:
                 playerRender.color = Color.yellow;
+                break;
+
+            case 3:
+                playerRender.color = Color.green;
                 break;
         }
     }

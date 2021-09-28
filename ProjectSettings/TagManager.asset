@@ -11,6 +11,7 @@ TagManager:
   - Hurtbox
   - DeathPlane
   - Goal
+  - GetThis
   layers:
   - Default
   - TransparentFX

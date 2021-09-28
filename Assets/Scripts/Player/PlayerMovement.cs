@@ -5,9 +5,10 @@ using System;
 
 public class PlayerMovement : MonoBehaviour
 {
-    private float speed, horizontal, vertical, jumpModifier, fireTimer, wallJumpTimer, previousPlayerDir;
+    private float speed, jumpModifier, fireTimer, wallJumpTimer, previousPlayerDir;
     private bool canDoubleJump, isWallSliding, canWallJump;
-    public bool firePower, jumpPower;
+    public bool firePower, jumpPower, pressedJump;
+    public float horizontal, vertical;
 
     private Rigidbody2D playerRigid;
     private BoxCollider2D playerBox;
@@ -41,8 +42,6 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        vertical = Input.GetAxis("Vertical");
-        horizontal = Input.GetAxis("Horizontal");
         WallMovement();
         jumpMovement();
         groundedMovement();
@@ -57,12 +56,14 @@ public class PlayerMovement : MonoBehaviour
         {
             wallJumpTimer += Time.deltaTime;
         }
+
+        Debug.Log(canDoubleJump);
     }
 
     private void jumpMovement()
     {
 
-        if (Input.GetButtonDown("Jump") && 
+        if (pressedJump == true && 
             (PlayerGrounded() == true ||
             (PlayerGrounded() == false && canDoubleJump == true && jumpPower == true) || 
             canWallJump == true))
@@ -149,10 +150,12 @@ public class PlayerMovement : MonoBehaviour
             case true:
                 speed = 8.5f;
                 anim.speed = 1.5f;
+                //jumpModifier = 12.0f;
                 break;
 
             case false:
                 speed = 5.0f;
+               // jumpModifier = 9.85f;
                 anim.speed = 1.0f;
                 break;
         }
@@ -187,7 +190,7 @@ public class PlayerMovement : MonoBehaviour
                 playerRigid.velocity = new Vector2(playerRigid.velocity.x, Mathf.Clamp(playerRigid.velocity.y, -1.5f, float.MaxValue));
 
 
-                if (Input.GetButtonDown("Jump"))
+                if (pressedJump == true)
                 {
                     float currentDir = playerXDir;
                     if (previousPlayerDir != currentDir && wallJumpTimer > 0.35f)
