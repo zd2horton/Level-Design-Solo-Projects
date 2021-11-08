@@ -1,0 +1,65 @@
+{
+    "2DPlat": {
+        "checkpoints": [
+            {
+                "steps": 699990,
+                "file_path": "results\\2DPlatDefaultGap-35-36CoinRowOfFourMILLIONSTEPS8TH\\2DPlat\\2DPlat-699990.onnx",
+                "reward": -0.64,
+                "creation_time": 1635392058.9215102,
+                "auxillary_file_paths": [
+                    "results\\2DPlatDefaultGap-35-36CoinRowOfFourMILLIONSTEPS8TH\\2DPlat\\2DPlat-699990.pt"
+                ]
+            },
+            {
+                "steps": 799992,
+                "file_path": "results\\2DPlatDefaultGap-35-36CoinRowOfFourMILLIONSTEPS8TH\\2DPlat\\2DPlat-799992.onnx",
+                "reward": -0.4825174825174825,
+                "creation_time": 1635392474.2840633,
+                "auxillary_file_paths": [
+                    "results\\2DPlatDefaultGap-35-36CoinRowOfFourMILLIONSTEPS8TH\\2DPlat\\2DPlat-799992.pt"
+                ]
+            },
+            {
+                "steps": 899993,
+                "file_path": "results\\2DPlatDefaultGap-35-36CoinRowOfFourMILLIONSTEPS8TH\\2DPlat\\2DPlat-899993.onnx",
+                "reward": 0.40834845735027225,
+                "creation_time": 1635392878.5422072,
+                "auxillary_file_paths": [
+                    "results\\2DPlatDefaultGap-35-36CoinRowOfFourMILLIONSTEPS8TH\\2DPlat\\2DPlat-899993.pt"
+                ]
+            },
+            {
+                "steps": 999990,
+                "file_path": "results\\2DPlatDefaultGap-35-36CoinRowOfFourMILLIONSTEPS8TH\\2DPlat\\2DPlat-999990.onnx",
+                "reward": 0.574468085106383,
+                "creation_time": 1635393320.3973598,
+                "auxillary_file_paths": [
+                    "results\\2DPlatDefaultGap-35-36CoinRowOfFourMILLIONSTEPS8TH\\2DPlat\\2DPlat-999990.pt"
+                ]
+            },
+            {
+                "steps": 1000002,
+                "file_path": "results\\2DPlatDefaultGap-35-36CoinRowOfFourMILLIONSTEPS8TH\\2DPlat\\2DPlat-1000002.onnx",
+                "reward": 0.5757575757575758,
+                "creation_time": 1635393320.4831562,
+                "auxillary_file_paths": [
+                    "results\\2DPlatDefaultGap-35-36CoinRowOfFourMILLIONSTEPS8TH\\2DPlat\\2DPlat-1000002.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 1000002,
+            "file_path": "results\\2DPlatDefaultGap-35-36CoinRowOfFourMILLIONSTEPS8TH\\2DPlat.onnx",
+            "reward": 0.5757575757575758,
+            "creation_time": 1635393320.4831562,
+            "auxillary_file_paths": [
+                "results\\2DPlatDefaultGap-35-36CoinRowOfFourMILLIONSTEPS8TH\\2DPlat\\2DPlat-1000002.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.27.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}

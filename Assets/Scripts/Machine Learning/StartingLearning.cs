@@ -12,8 +12,12 @@ public class StartingLearning : Agent
     private Vector2 initialPos;
     private Rigidbody2D playerRigid;
     private PlayerMovement playerMove;
-    private int horInt, verInt;
+    private int horInt, verInt, numCoins;
     public GameObject currentTarget;
+    private float prevDist;
+    private bool loseState, winState;
+
+    public GameObject[] coins;
 
     public override void Initialize()
     {
@@ -29,6 +33,17 @@ public class StartingLearning : Agent
         GetComponent<SpriteRenderer>().flipX = false;
         GetComponent<PlayerController>().health = 3;
         GetComponent<SpriteRenderer>().color = Color.green;
+        prevDist = Vector3.Distance(transform.localPosition, currentTarget.transform.localPosition);
+        numCoins = 0;
+        winState = false;
+
+        for (int i = 0; i < coins.Length; i++)
+        {
+            coins[i].SetActive(true);
+        }
+
+        loseState = false;
+        winState = false;
         //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
@@ -37,28 +52,70 @@ public class StartingLearning : Agent
         sensor.AddObservation(transform.localPosition);
         sensor.AddObservation(GetComponent<PlayerController>().health);
         sensor.AddObservation(currentTarget.transform.localPosition);
+        sensor.AddObservation(Vector3.Distance(transform.localPosition, currentTarget.transform.localPosition));
+        sensor.AddObservation(System.Convert.ToInt32(playerMove.pressedJump));
     }
-    
+
+    //public override void Heuristic(in ActionBuffers actionsOut)
+    //{
+    //    ActionSegment<float> continuousActionsOut = actionsOut.ContinuousActions;
+    //    continuousActionsOut[0] = Mathf.RoundToInt(Input.GetAxis("Horizontal"));
+    //    continuousActionsOut[1] = System.Convert.ToInt32(Input.GetButton("Jump"));
+    //}
+
     public override void Heuristic(in ActionBuffers actionsOut)
     {
-        ActionSegment<float> continuousActionsOut = actionsOut.ContinuousActions;
-        continuousActionsOut[0] = Mathf.RoundToInt(Input.GetAxis("Horizontal"));
-        continuousActionsOut[1] = System.Convert.ToInt32(Input.GetButton("Jump"));
+        ActionSegment<int> discActionsOut = actionsOut.DiscreteActions;
+        discActionsOut[0] = Mathf.RoundToInt(Input.GetAxis("Horizontal"));
+        discActionsOut[1] = System.Convert.ToInt32(Input.GetButton("Jump"));
     }
 
     public override void OnActionReceived(ActionBuffers actionBuffers)
     {
         Vector3 controlSignal = Vector3.zero;
-        controlSignal.x = actionBuffers.ContinuousActions[0];
-        controlSignal.y = actionBuffers.ContinuousActions[1];
+        //controlSignal.x = actionBuffers.ContinuousActions[0];
+        //controlSignal.y = actionBuffers.ContinuousActions[1];
 
-        playerMove.horizontal = actionBuffers.ContinuousActions[0];
-        playerMove.pressedJump = actionBuffers.ContinuousActions[1] == 1 ? true : false;
+        //playerMove.horizontal = actionBuffers.ContinuousActions[0];
+        //playerMove.pressedJump = actionBuffers.ContinuousActions[1] == 1 ? true : false;
+
+        playerMove.horizontal = actionBuffers.DiscreteActions[0] <= 1 ? actionBuffers.DiscreteActions[0] : -1;
+        playerMove.pressedJump = actionBuffers.DiscreteActions[1] == 1 ? true : false;
+
+        //if (prevDist > Vector3.Distance(transform.localPosition, currentTarget.transform.localPosition))
+        //{
+        //    AddReward(0.0000001f);
+        //}
+
+        //else if (prevDist < Vector3.Distance(transform.localPosition, currentTarget.transform.localPosition))
+        //{
+        //    AddReward(-0.0000001f);
+        //}
 
         if (GetComponent<PlayerController>().health <= 0)
         {
+            loseState = true;
+        }
+
+        if (loseState == true)
+        {
             AddReward(-1f);
             EndEpisode();
+        }
+
+        else if (winState == true)
+        {
+            AddReward(1f);
+            //AddReward(0.5f);
+            //numCoins++;
+
+
+            //if (numCoins >= coins.Length)
+            //{
+                EndEpisode();
+            //}
+
+            //winState = false;
         }
     }
 
@@ -72,8 +129,13 @@ public class StartingLearning : Agent
 
         else if (collision.gameObject.tag == "GetThis")
         {
-            AddReward(1f);
-            EndEpisode();
+            winState = true;
+            //collision.gameObject.SetActive(false);
+
+            //if (numCoins >= coins.Length)
+            //{
+            //    EndEpisode();
+            //}
         }
     }
 }

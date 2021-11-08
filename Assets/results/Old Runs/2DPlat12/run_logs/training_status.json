@@ -1,0 +1,38 @@
+{
+    "2DPlat": {
+        "checkpoints": [
+            {
+                "steps": 9934,
+                "file_path": "results\\2DPlat12\\2DPlat\\2DPlat-9934.onnx",
+                "reward": -0.8198154401300152,
+                "creation_time": 1632995375.8728979,
+                "auxillary_file_paths": [
+                    "results\\2DPlat12\\2DPlat\\2DPlat-9934.pt"
+                ]
+            },
+            {
+                "steps": 10664,
+                "file_path": "results\\2DPlat12\\2DPlat\\2DPlat-10664.onnx",
+                "reward": -0.9999875999999404,
+                "creation_time": 1632995395.5706694,
+                "auxillary_file_paths": [
+                    "results\\2DPlat12\\2DPlat\\2DPlat-10664.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 10664,
+            "file_path": "results\\2DPlat12\\2DPlat.onnx",
+            "reward": -0.9999875999999404,
+            "creation_time": 1632995395.5706694,
+            "auxillary_file_paths": [
+                "results\\2DPlat12\\2DPlat\\2DPlat-10664.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.27.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}

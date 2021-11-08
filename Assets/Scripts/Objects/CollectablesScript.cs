@@ -14,7 +14,7 @@ public class CollectablesScript : MonoBehaviour
     private PlayerController playerCont;
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
+        player = gameObject; /*GameObject.FindGameObjectWithTag("Player")*/;
         playerMove = player.GetComponent<PlayerMovement>();
         playerCont = player.GetComponent<PlayerController>();
         livesText = UICanvas.gameObject.transform.GetChild(1).GetComponent<TextMeshProUGUI>();

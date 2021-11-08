@@ -1,0 +1,29 @@
+{
+    "2DPlat": {
+        "checkpoints": [
+            {
+                "steps": 35218,
+                "file_path": "results\\2DPlat20\\2DPlat\\2DPlat-35218.onnx",
+                "reward": -0.48148148148148145,
+                "creation_time": 1633563089.4475236,
+                "auxillary_file_paths": [
+                    "results\\2DPlat20\\2DPlat\\2DPlat-35218.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 35218,
+            "file_path": "results\\2DPlat20\\2DPlat.onnx",
+            "reward": -0.48148148148148145,
+            "creation_time": 1633563089.4475236,
+            "auxillary_file_paths": [
+                "results\\2DPlat20\\2DPlat\\2DPlat-35218.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.27.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}

@@ -1,0 +1,65 @@
+{
+    "2DPlat": {
+        "checkpoints": [
+            {
+                "steps": 19950,
+                "file_path": "results\\2DPlat13\\2DPlat\\2DPlat-19950.onnx",
+                "reward": 0.1864406779661017,
+                "creation_time": 1633149973.6964524,
+                "auxillary_file_paths": [
+                    "results\\2DPlat13\\2DPlat\\2DPlat-19950.pt"
+                ]
+            },
+            {
+                "steps": 29997,
+                "file_path": "results\\2DPlat13\\2DPlat\\2DPlat-29997.onnx",
+                "reward": 0.7391304347826086,
+                "creation_time": 1633150094.4944081,
+                "auxillary_file_paths": [
+                    "results\\2DPlat13\\2DPlat\\2DPlat-29997.pt"
+                ]
+            },
+            {
+                "steps": 39975,
+                "file_path": "results\\2DPlat13\\2DPlat\\2DPlat-39975.onnx",
+                "reward": 0.975609756097561,
+                "creation_time": 1633150217.9494212,
+                "auxillary_file_paths": [
+                    "results\\2DPlat13\\2DPlat\\2DPlat-39975.pt"
+                ]
+            },
+            {
+                "steps": 49992,
+                "file_path": "results\\2DPlat13\\2DPlat\\2DPlat-49992.onnx",
+                "reward": 0.9814814814814815,
+                "creation_time": 1633150342.3635688,
+                "auxillary_file_paths": [
+                    "results\\2DPlat13\\2DPlat\\2DPlat-49992.pt"
+                ]
+            },
+            {
+                "steps": 50061,
+                "file_path": "results\\2DPlat13\\2DPlat\\2DPlat-50061.onnx",
+                "reward": 0.981651376146789,
+                "creation_time": 1633150342.5221467,
+                "auxillary_file_paths": [
+                    "results\\2DPlat13\\2DPlat\\2DPlat-50061.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 50061,
+            "file_path": "results\\2DPlat13\\2DPlat.onnx",
+            "reward": 0.981651376146789,
+            "creation_time": 1633150342.5221467,
+            "auxillary_file_paths": [
+                "results\\2DPlat13\\2DPlat\\2DPlat-50061.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.27.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}

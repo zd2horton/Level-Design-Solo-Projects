@@ -8301,7 +8301,7 @@ Tilemap:
   - first: {x: 2, y: 5, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 8
+      m_TileIndex: 4
       m_TileSpriteIndex: 4294967295
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
@@ -8635,7 +8635,7 @@ Tilemap:
       m_TileSpriteIndex: 4294967295
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 0
+      m_TileObjectToInstantiateIndex: 2
       dummyAlignment: 0
       m_AllTileFlags: 0
   - first: {x: 43, y: 11, z: 0}
@@ -8678,15 +8678,15 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 04edd49f9aa2c1c4d9832904a9132395, type: 2}
   - m_RefCount: 12
     m_Data: {fileID: 11400000, guid: 8bc91ee2cdb8e3247b42261802eb751b, type: 2}
   - m_RefCount: 17
     m_Data: {fileID: 11400000, guid: 922e3f86a125b954385164b230c628c2, type: 2}
   - m_RefCount: 6
     m_Data: {fileID: 11400000, guid: 95da5fe69bd5dc843a55624696b1ec48, type: 2}
-  - m_RefCount: 2
+  - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 7163e086d2af2c741adc4b09f70b2c9e, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 8e82bb67846974846b3cd9441ae1fcd5, type: 2}
@@ -8791,11 +8791,14 @@ Tilemap:
   - m_RefCount: 494
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray:
-  - m_RefCount: 2
+  - m_RefCount: 1
     m_Data: {fileID: 1324009705024932137, guid: 23d6b99a9e2bf264090b59657b8bfbe7,
       type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 2098550410113069121, guid: 3dd52a0aab0424c42a20db037aa0ebe9,
+      type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 1324009705024932137, guid: 4b1d04b268092e24c97e09c3fa3be3b5,
       type: 3}
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -9938,14 +9941,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BrainParameters:
-    VectorObservationSize: 7
+    VectorObservationSize: 9
     NumStackedVectorObservations: 1
     m_ActionSpec:
-      m_NumContinuousActions: 2
-      BranchSizes: 
-    VectorActionSize: 02000000
+      m_NumContinuousActions: 0
+      BranchSizes: 0300000002000000
+    VectorActionSize: 0300000002000000
     VectorActionDescriptions: []
-    VectorActionSpaceType: 1
+    VectorActionSpaceType: 0
     hasUpgradedBrainParametersWithActionSpec: 1
   m_Model: {fileID: 0}
   m_InferenceDevice: 3
@@ -9972,6 +9975,7 @@ MonoBehaviour:
   hasUpgradedFromAgentParameters: 1
   MaxStep: 0
   currentTarget: {fileID: 1827904379}
+  coins: []
 --- !u!1001 &2041994693
 PrefabInstance:
   m_ObjectHideFlags: 0

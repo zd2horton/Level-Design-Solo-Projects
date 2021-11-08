@@ -1,0 +1,65 @@
+{
+    "2DPlat": {
+        "checkpoints": [
+            {
+                "steps": 21983,
+                "file_path": "results\\2DPlat2\\2DPlat\\2DPlat-21983.onnx",
+                "reward": null,
+                "creation_time": 1632988613.3482006,
+                "auxillary_file_paths": [
+                    "results\\2DPlat2\\2DPlat\\2DPlat-21983.pt"
+                ]
+            },
+            {
+                "steps": 22983,
+                "file_path": "results\\2DPlat2\\2DPlat\\2DPlat-22983.onnx",
+                "reward": null,
+                "creation_time": 1632988619.5165234,
+                "auxillary_file_paths": [
+                    "results\\2DPlat2\\2DPlat\\2DPlat-22983.pt"
+                ]
+            },
+            {
+                "steps": 23983,
+                "file_path": "results\\2DPlat2\\2DPlat\\2DPlat-23983.onnx",
+                "reward": null,
+                "creation_time": 1632988628.5255435,
+                "auxillary_file_paths": [
+                    "results\\2DPlat2\\2DPlat\\2DPlat-23983.pt"
+                ]
+            },
+            {
+                "steps": 24990,
+                "file_path": "results\\2DPlat2\\2DPlat\\2DPlat-24990.onnx",
+                "reward": -1.0,
+                "creation_time": 1632988635.50811,
+                "auxillary_file_paths": [
+                    "results\\2DPlat2\\2DPlat\\2DPlat-24990.pt"
+                ]
+            },
+            {
+                "steps": 25390,
+                "file_path": "results\\2DPlat2\\2DPlat\\2DPlat-25390.onnx",
+                "reward": -1.0,
+                "creation_time": 1632988638.3663077,
+                "auxillary_file_paths": [
+                    "results\\2DPlat2\\2DPlat\\2DPlat-25390.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 25390,
+            "file_path": "results\\2DPlat2\\2DPlat.onnx",
+            "reward": -1.0,
+            "creation_time": 1632988638.3663077,
+            "auxillary_file_paths": [
+                "results\\2DPlat2\\2DPlat\\2DPlat-25390.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.27.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}
