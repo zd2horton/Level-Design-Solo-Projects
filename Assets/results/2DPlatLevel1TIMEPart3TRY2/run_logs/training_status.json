@@ -1,0 +1,65 @@
+{
+    "2DPlat": {
+        "checkpoints": [
+            {
+                "steps": 699960,
+                "file_path": "results\\2DPlatLevel1TIMEPart3TRY2\\2DPlat\\2DPlat-699960.onnx",
+                "reward": 0.48427676086155874,
+                "creation_time": 1639293960.117739,
+                "auxillary_file_paths": [
+                    "results\\2DPlatLevel1TIMEPart3TRY2\\2DPlat\\2DPlat-699960.pt"
+                ]
+            },
+            {
+                "steps": 799997,
+                "file_path": "results\\2DPlatLevel1TIMEPart3TRY2\\2DPlat\\2DPlat-799997.onnx",
+                "reward": 0.4966102015163939,
+                "creation_time": 1639294177.0847814,
+                "auxillary_file_paths": [
+                    "results\\2DPlatLevel1TIMEPart3TRY2\\2DPlat\\2DPlat-799997.pt"
+                ]
+            },
+            {
+                "steps": 899995,
+                "file_path": "results\\2DPlatLevel1TIMEPart3TRY2\\2DPlat\\2DPlat-899995.onnx",
+                "reward": 0.44938778567070864,
+                "creation_time": 1639294389.70225,
+                "auxillary_file_paths": [
+                    "results\\2DPlatLevel1TIMEPart3TRY2\\2DPlat\\2DPlat-899995.pt"
+                ]
+            },
+            {
+                "steps": 999989,
+                "file_path": "results\\2DPlatLevel1TIMEPart3TRY2\\2DPlat\\2DPlat-999989.onnx",
+                "reward": 0.4606896858790825,
+                "creation_time": 1639294604.243829,
+                "auxillary_file_paths": [
+                    "results\\2DPlatLevel1TIMEPart3TRY2\\2DPlat\\2DPlat-999989.pt"
+                ]
+            },
+            {
+                "steps": 1000024,
+                "file_path": "results\\2DPlatLevel1TIMEPart3TRY2\\2DPlat\\2DPlat-1000024.onnx",
+                "reward": 0.4506849620031984,
+                "creation_time": 1639294604.3565662,
+                "auxillary_file_paths": [
+                    "results\\2DPlatLevel1TIMEPart3TRY2\\2DPlat\\2DPlat-1000024.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 1000024,
+            "file_path": "results\\2DPlatLevel1TIMEPart3TRY2\\2DPlat.onnx",
+            "reward": 0.4506849620031984,
+            "creation_time": 1639294604.3565662,
+            "auxillary_file_paths": [
+                "results\\2DPlatLevel1TIMEPart3TRY2\\2DPlat\\2DPlat-1000024.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.27.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}

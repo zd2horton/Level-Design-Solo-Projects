@@ -45,10 +45,14 @@ public class CollectablesScript : MonoBehaviour
             }
 
             playerCont.score += 200;
+            //Destroy(collision.gameObject);
+            collision.gameObject.SetActive(false);
+        }
 
-
-
-            Destroy(collision.gameObject);
+        else if (collision.tag == "CheckpointCoin")
+        {
+            playerCont.score += 200;
+            collision.gameObject.SetActive(false);
         }
     }
 }

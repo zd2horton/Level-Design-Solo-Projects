@@ -1,0 +1,65 @@
+{
+    "2DPlat": {
+        "checkpoints": [
+            {
+                "steps": 699989,
+                "file_path": "results\\2DPlatLevel1BESTOBSERVPart2TRY5Hopefully\\2DPlat\\2DPlat-699989.onnx",
+                "reward": 0.6965174129353234,
+                "creation_time": 1639546700.720897,
+                "auxillary_file_paths": [
+                    "results\\2DPlatLevel1BESTOBSERVPart2TRY5Hopefully\\2DPlat\\2DPlat-699989.pt"
+                ]
+            },
+            {
+                "steps": 799992,
+                "file_path": "results\\2DPlatLevel1BESTOBSERVPart2TRY5Hopefully\\2DPlat\\2DPlat-799992.onnx",
+                "reward": 0.7111111111111111,
+                "creation_time": 1639546916.5046535,
+                "auxillary_file_paths": [
+                    "results\\2DPlatLevel1BESTOBSERVPart2TRY5Hopefully\\2DPlat\\2DPlat-799992.pt"
+                ]
+            },
+            {
+                "steps": 899993,
+                "file_path": "results\\2DPlatLevel1BESTOBSERVPart2TRY5Hopefully\\2DPlat\\2DPlat-899993.onnx",
+                "reward": 0.7100977198697068,
+                "creation_time": 1639547125.6563604,
+                "auxillary_file_paths": [
+                    "results\\2DPlatLevel1BESTOBSERVPart2TRY5Hopefully\\2DPlat\\2DPlat-899993.pt"
+                ]
+            },
+            {
+                "steps": 999992,
+                "file_path": "results\\2DPlatLevel1BESTOBSERVPart2TRY5Hopefully\\2DPlat\\2DPlat-999992.onnx",
+                "reward": 0.7275064267352185,
+                "creation_time": 1639547355.2032251,
+                "auxillary_file_paths": [
+                    "results\\2DPlatLevel1BESTOBSERVPart2TRY5Hopefully\\2DPlat\\2DPlat-999992.pt"
+                ]
+            },
+            {
+                "steps": 1000014,
+                "file_path": "results\\2DPlatLevel1BESTOBSERVPart2TRY5Hopefully\\2DPlat\\2DPlat-1000014.onnx",
+                "reward": 0.7282051282051282,
+                "creation_time": 1639547355.3159409,
+                "auxillary_file_paths": [
+                    "results\\2DPlatLevel1BESTOBSERVPart2TRY5Hopefully\\2DPlat\\2DPlat-1000014.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 1000014,
+            "file_path": "results\\2DPlatLevel1BESTOBSERVPart2TRY5Hopefully\\2DPlat.onnx",
+            "reward": 0.7282051282051282,
+            "creation_time": 1639547355.3159409,
+            "auxillary_file_paths": [
+                "results\\2DPlatLevel1BESTOBSERVPart2TRY5Hopefully\\2DPlat\\2DPlat-1000014.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.27.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}

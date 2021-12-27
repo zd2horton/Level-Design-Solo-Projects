@@ -1,0 +1,65 @@
+{
+    "2DPlat": {
+        "checkpoints": [
+            {
+                "steps": 699992,
+                "file_path": "results\\RAYDefaultGapNOMODEL3Wide-37-35TRY3\\2DPlat\\2DPlat-699992.onnx",
+                "reward": 0.6108108108108108,
+                "creation_time": 1637279146.546941,
+                "auxillary_file_paths": [
+                    "results\\RAYDefaultGapNOMODEL3Wide-37-35TRY3\\2DPlat\\2DPlat-699992.pt"
+                ]
+            },
+            {
+                "steps": 799993,
+                "file_path": "results\\RAYDefaultGapNOMODEL3Wide-37-35TRY3\\2DPlat\\2DPlat-799993.onnx",
+                "reward": 0.6428571428571429,
+                "creation_time": 1637279589.9001036,
+                "auxillary_file_paths": [
+                    "results\\RAYDefaultGapNOMODEL3Wide-37-35TRY3\\2DPlat\\2DPlat-799993.pt"
+                ]
+            },
+            {
+                "steps": 899984,
+                "file_path": "results\\RAYDefaultGapNOMODEL3Wide-37-35TRY3\\2DPlat\\2DPlat-899984.onnx",
+                "reward": 0.8674948240165632,
+                "creation_time": 1637280031.533379,
+                "auxillary_file_paths": [
+                    "results\\RAYDefaultGapNOMODEL3Wide-37-35TRY3\\2DPlat\\2DPlat-899984.pt"
+                ]
+            },
+            {
+                "steps": 999988,
+                "file_path": "results\\RAYDefaultGapNOMODEL3Wide-37-35TRY3\\2DPlat\\2DPlat-999988.onnx",
+                "reward": 0.8757396449704142,
+                "creation_time": 1637280472.112431,
+                "auxillary_file_paths": [
+                    "results\\RAYDefaultGapNOMODEL3Wide-37-35TRY3\\2DPlat\\2DPlat-999988.pt"
+                ]
+            },
+            {
+                "steps": 1000006,
+                "file_path": "results\\RAYDefaultGapNOMODEL3Wide-37-35TRY3\\2DPlat\\2DPlat-1000006.onnx",
+                "reward": 0.8761061946902655,
+                "creation_time": 1637280472.2086518,
+                "auxillary_file_paths": [
+                    "results\\RAYDefaultGapNOMODEL3Wide-37-35TRY3\\2DPlat\\2DPlat-1000006.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 1000006,
+            "file_path": "results\\RAYDefaultGapNOMODEL3Wide-37-35TRY3\\2DPlat.onnx",
+            "reward": 0.8761061946902655,
+            "creation_time": 1637280472.2086518,
+            "auxillary_file_paths": [
+                "results\\RAYDefaultGapNOMODEL3Wide-37-35TRY3\\2DPlat\\2DPlat-1000006.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.27.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}

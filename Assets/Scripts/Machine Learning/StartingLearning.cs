@@ -5,26 +5,33 @@ using Unity.MLAgents;
 using Unity.MLAgents.Sensors;
 using Unity.MLAgents.Actuators;
 using UnityEngine.SceneManagement;
+using UnityEngine.Tilemaps;
 
 public class StartingLearning : Agent
 {
-    private GameObject exit;
+    //private GameObject exit;
     private Vector2 initialPos;
     private Rigidbody2D playerRigid;
     private PlayerMovement playerMove;
-    private int horInt, verInt, numCoins;
+    private int horInt, verInt, numCoins, lastHealth, collFactor;
     public GameObject currentTarget;
     private float prevDist;
-    private bool loseState, winState;
 
-    public GameObject[] coins;
+    public Tile tileToPlace;
+    private int blockPos;
+    public Tilemap groundMap;
+
+    public GameObject[] progressCoins;
 
     public override void Initialize()
     {
-        exit = GameObject.FindGameObjectWithTag("Goal");
+        //exit = GameObject.FindGameObjectWithTag("Goal");
         initialPos = transform.position;
         playerRigid = GetComponent<Rigidbody2D>();
         playerMove = GetComponent<PlayerMovement>();
+        blockPos = 0;
+        lastHealth = 0;
+        collFactor = 0;
     }
 
     public override void OnEpisodeBegin()
@@ -35,15 +42,43 @@ public class StartingLearning : Agent
         GetComponent<SpriteRenderer>().color = Color.green;
         prevDist = Vector3.Distance(transform.localPosition, currentTarget.transform.localPosition);
         numCoins = 0;
-        winState = false;
 
-        for (int i = 0; i < coins.Length; i++)
+        for (int i = 0; i < progressCoins.Length; i++)
         {
-            coins[i].SetActive(true);
+            progressCoins[i].SetActive(true);
         }
 
-        loseState = false;
-        winState = false;
+
+        for (int i = 0; i < 3; i++)
+        {
+            Vector3Int cellPos = new Vector3Int((-37 + i), -3, 0);
+            if (groundMap.HasTile(cellPos))
+            {
+                groundMap.SetTile(cellPos, null);
+            }
+        }
+
+        blockPos = Random.Range(0, 4);
+
+        switch (blockPos)
+        {
+
+            case 1:
+                groundMap.SetTile(new Vector3Int(-37, -3, 0), tileToPlace);
+                break;
+
+            case 2:
+                groundMap.SetTile(new Vector3Int(-36, -3, 0), tileToPlace);
+                break;
+
+            case 3:
+                groundMap.SetTile(new Vector3Int(-35, -3, 0), tileToPlace);
+                break;
+
+            default:
+                break;
+
+        }
         //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
@@ -53,7 +88,9 @@ public class StartingLearning : Agent
         sensor.AddObservation(GetComponent<PlayerController>().health);
         sensor.AddObservation(currentTarget.transform.localPosition);
         sensor.AddObservation(Vector3.Distance(transform.localPosition, currentTarget.transform.localPosition));
-        sensor.AddObservation(System.Convert.ToInt32(playerMove.pressedJump));
+        sensor.AddObservation(System.Convert.ToInt32(playerMove.pressedRun));
+
+        //sensor.AddObservation(System.Convert.ToInt32(Input.GetButton("Run")));
     }
 
     //public override void Heuristic(in ActionBuffers actionsOut)
@@ -81,61 +118,90 @@ public class StartingLearning : Agent
 
         playerMove.horizontal = actionBuffers.DiscreteActions[0] <= 1 ? actionBuffers.DiscreteActions[0] : -1;
         playerMove.pressedJump = actionBuffers.DiscreteActions[1] == 1 ? true : false;
+        playerMove.pressedRun = actionBuffers.DiscreteActions[2] == 1 ? true : false;
 
-        //if (prevDist > Vector3.Distance(transform.localPosition, currentTarget.transform.localPosition))
-        //{
-        //    AddReward(0.0000001f);
-        //}
-
-        //else if (prevDist < Vector3.Distance(transform.localPosition, currentTarget.transform.localPosition))
-        //{
-        //    AddReward(-0.0000001f);
-        //}
-
-        if (GetComponent<PlayerController>().health <= 0)
+        if (prevDist > Vector3.Distance(transform.localPosition, currentTarget.transform.localPosition))
         {
-            loseState = true;
+            AddReward(1/1000000);
         }
 
-        if (loseState == true)
+        else {AddReward(-1 / 1000000);}
+
+        //RaycastHit2D leftCast = Physics2D.Raycast(
+        //          playerMove.playerBox.bounds.center - new Vector3(playerMove.playerBox.bounds.extents.x, 0)
+        //          , Vector2.down, playerMove.playerBox.bounds.extents.y + 0.1f, playerMove.groundLayerMask);
+
+        //RaycastHit2D rightCast = Physics2D.Raycast(
+        //    playerMove.playerBox.bounds.center + new Vector3(playerMove.playerBox.bounds.extents.x, 0)
+        //    , Vector2.down, playerMove.playerBox.bounds.extents.y + 0.1f, playerMove.groundLayerMask);
+
+
+        //RaycastHit2D sideHit = Physics2D.Raycast(
+        //    playerMove.playerBox.bounds.center,
+        //    new Vector2(playerMove.playerXDir, 0), playerMove.playerBox.bounds.extents.x + 0.025f, playerMove.groundLayerMask);
+
+        //if ((leftCast.collider == null && rightCast.collider != null) || (leftCast.collider != null && rightCast.collider == null)
+        //    || (sideHit.collider != null))
+        //{
+        //    Debug.Log("Hanging off edge");
+        //    playerMove.pressedJump = true;
+        //}
+
+
+        if (lastHealth > GetComponent<PlayerController>().health)
+        {
+            AddReward(-0.3f);
+        }
+
+        lastHealth = GetComponent<PlayerController>().health;
+
+        if (GetComponent<PlayerController>().health <= 0)
         {
             AddReward(-1f);
             EndEpisode();
         }
 
-        else if (winState == true)
+
+        switch (collFactor)
         {
-            AddReward(1f);
-            //AddReward(0.5f);
-            //numCoins++;
-
-
-            //if (numCoins >= coins.Length)
-            //{
+            case 1:
+                AddReward(1f);
                 EndEpisode();
-            //}
+                break;
 
-            //winState = false;
+            case 2:
+                AddReward(0.1f);
+                break;
+
+            case 3:
+                AddReward(-1f);
+                EndEpisode();
+                break;
+
+            default:
+                break;
         }
+        collFactor = 0;
+
+        AddReward(1 / MaxStep);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "DeathPlane")
         {
-            AddReward(-1f);
-            EndEpisode();
+            collFactor = 3;
+        }
+
+        else if(collision.gameObject.tag == "Collectable")
+        {
+            collFactor = 2;
         }
 
         else if (collision.gameObject.tag == "GetThis")
         {
-            winState = true;
-            //collision.gameObject.SetActive(false);
-
-            //if (numCoins >= coins.Length)
-            //{
-            //    EndEpisode();
-            //}
+            collFactor = 1;
+            collision.gameObject.SetActive(false);
         }
     }
 }

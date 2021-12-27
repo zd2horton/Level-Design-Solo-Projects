@@ -1,0 +1,65 @@
+{
+    "2DPlat": {
+        "checkpoints": [
+            {
+                "steps": 699994,
+                "file_path": "results\\2DPlatDefaultPostNovGap-36TRY3\\2DPlat\\2DPlat-699994.onnx",
+                "reward": 0.46153846153846156,
+                "creation_time": 1636766621.6831074,
+                "auxillary_file_paths": [
+                    "results\\2DPlatDefaultPostNovGap-36TRY3\\2DPlat\\2DPlat-699994.pt"
+                ]
+            },
+            {
+                "steps": 799984,
+                "file_path": "results\\2DPlatDefaultPostNovGap-36TRY3\\2DPlat\\2DPlat-799984.onnx",
+                "reward": 0.5555555555555556,
+                "creation_time": 1636767055.6744673,
+                "auxillary_file_paths": [
+                    "results\\2DPlatDefaultPostNovGap-36TRY3\\2DPlat\\2DPlat-799984.pt"
+                ]
+            },
+            {
+                "steps": 899999,
+                "file_path": "results\\2DPlatDefaultPostNovGap-36TRY3\\2DPlat\\2DPlat-899999.onnx",
+                "reward": 0.46798029556650245,
+                "creation_time": 1636767518.0393834,
+                "auxillary_file_paths": [
+                    "results\\2DPlatDefaultPostNovGap-36TRY3\\2DPlat\\2DPlat-899999.pt"
+                ]
+            },
+            {
+                "steps": 999983,
+                "file_path": "results\\2DPlatDefaultPostNovGap-36TRY3\\2DPlat\\2DPlat-999983.onnx",
+                "reward": 0.5053003533568905,
+                "creation_time": 1636767904.920021,
+                "auxillary_file_paths": [
+                    "results\\2DPlatDefaultPostNovGap-36TRY3\\2DPlat\\2DPlat-999983.pt"
+                ]
+            },
+            {
+                "steps": 1000003,
+                "file_path": "results\\2DPlatDefaultPostNovGap-36TRY3\\2DPlat\\2DPlat-1000003.onnx",
+                "reward": 0.5070422535211268,
+                "creation_time": 1636767904.985846,
+                "auxillary_file_paths": [
+                    "results\\2DPlatDefaultPostNovGap-36TRY3\\2DPlat\\2DPlat-1000003.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 1000003,
+            "file_path": "results\\2DPlatDefaultPostNovGap-36TRY3\\2DPlat.onnx",
+            "reward": 0.5070422535211268,
+            "creation_time": 1636767904.985846,
+            "auxillary_file_paths": [
+                "results\\2DPlatDefaultPostNovGap-36TRY3\\2DPlat\\2DPlat-1000003.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.27.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}

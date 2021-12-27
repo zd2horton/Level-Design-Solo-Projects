@@ -1,0 +1,65 @@
+{
+    "2DPlat": {
+        "checkpoints": [
+            {
+                "steps": 699978,
+                "file_path": "results\\2DPlatNovemAlterConfigOneGap2Wide-36\\2DPlat\\2DPlat-699978.onnx",
+                "reward": -1.0,
+                "creation_time": 1636678056.056032,
+                "auxillary_file_paths": [
+                    "results\\2DPlatNovemAlterConfigOneGap2Wide-36\\2DPlat\\2DPlat-699978.pt"
+                ]
+            },
+            {
+                "steps": 799976,
+                "file_path": "results\\2DPlatNovemAlterConfigOneGap2Wide-36\\2DPlat\\2DPlat-799976.onnx",
+                "reward": -1.0,
+                "creation_time": 1636678292.6051462,
+                "auxillary_file_paths": [
+                    "results\\2DPlatNovemAlterConfigOneGap2Wide-36\\2DPlat\\2DPlat-799976.pt"
+                ]
+            },
+            {
+                "steps": 899998,
+                "file_path": "results\\2DPlatNovemAlterConfigOneGap2Wide-36\\2DPlat\\2DPlat-899998.onnx",
+                "reward": -1.0,
+                "creation_time": 1636678524.42635,
+                "auxillary_file_paths": [
+                    "results\\2DPlatNovemAlterConfigOneGap2Wide-36\\2DPlat\\2DPlat-899998.pt"
+                ]
+            },
+            {
+                "steps": 999989,
+                "file_path": "results\\2DPlatNovemAlterConfigOneGap2Wide-36\\2DPlat\\2DPlat-999989.onnx",
+                "reward": -1.0,
+                "creation_time": 1636678765.0036926,
+                "auxillary_file_paths": [
+                    "results\\2DPlatNovemAlterConfigOneGap2Wide-36\\2DPlat\\2DPlat-999989.pt"
+                ]
+            },
+            {
+                "steps": 1000064,
+                "file_path": "results\\2DPlatNovemAlterConfigOneGap2Wide-36\\2DPlat\\2DPlat-1000064.onnx",
+                "reward": -1.0,
+                "creation_time": 1636678765.0745306,
+                "auxillary_file_paths": [
+                    "results\\2DPlatNovemAlterConfigOneGap2Wide-36\\2DPlat\\2DPlat-1000064.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 1000064,
+            "file_path": "results\\2DPlatNovemAlterConfigOneGap2Wide-36\\2DPlat.onnx",
+            "reward": -1.0,
+            "creation_time": 1636678765.0745306,
+            "auxillary_file_paths": [
+                "results\\2DPlatNovemAlterConfigOneGap2Wide-36\\2DPlat\\2DPlat-1000064.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.27.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}

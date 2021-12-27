@@ -1,0 +1,29 @@
+{
+    "2DPlat": {
+        "checkpoints": [
+            {
+                "steps": 60416,
+                "file_path": "results\\2DPlatLevel1Part1TrainingTRY2\\2DPlat\\2DPlat-60416.onnx",
+                "reward": null,
+                "creation_time": 1638912883.2152905,
+                "auxillary_file_paths": [
+                    "results\\2DPlatLevel1Part1TrainingTRY2\\2DPlat\\2DPlat-60416.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 60416,
+            "file_path": "results\\2DPlatLevel1Part1TrainingTRY2\\2DPlat.onnx",
+            "reward": null,
+            "creation_time": 1638912883.2152905,
+            "auxillary_file_paths": [
+                "results\\2DPlatLevel1Part1TrainingTRY2\\2DPlat\\2DPlat-60416.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.27.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}

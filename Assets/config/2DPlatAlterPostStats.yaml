@@ -1,0 +1,40 @@
+default_settings: null
+behaviors:
+  2DPlat:
+    trainer_type: ppo
+    hyperparameters:
+      batch_size: 512 
+      buffer_size: 15000 #maybe dec? 3192? 
+      learning_rate: 0.0003 #3e-4? decreased
+      beta: 0.008 #increase if entropy falls fast, vice versa. increased
+      epsilon: 0.15 #decreased
+      lambd: 0.95
+      num_epoch: 4
+      learning_rate_schedule: linear
+    network_settings:
+      normalize: false
+      hidden_units: 256
+      num_layers: 2 
+      vis_encode_type: simple
+      memory: null
+      goal_conditioning_type: hyper
+    reward_signals:
+      extrinsic:
+        gamma: 0.99 #changed first from 0.885
+        strength: 1.0 
+        network_settings:
+          normalize: false
+          hidden_units: 256
+          num_layers: 2
+          vis_encode_type: simple
+          memory: null
+          goal_conditioning_type: hyper
+    init_path: null
+    keep_checkpoints: 5
+    checkpoint_interval: 100000
+    max_steps: 1000000
+    time_horizon: 64 #long time episode ==> smaller
+    summary_freq: 50000
+    threaded: false
+    self_play: null
+    behavioral_cloning: null

@@ -1,0 +1,65 @@
+{
+    "2DPlat": {
+        "checkpoints": [
+            {
+                "steps": 699996,
+                "file_path": "results\\2DPlatLevel1TIMEGapTraining-10-11\\2DPlat\\2DPlat-699996.onnx",
+                "reward": 0.7947269303201506,
+                "creation_time": 1639184686.5589006,
+                "auxillary_file_paths": [
+                    "results\\2DPlatLevel1TIMEGapTraining-10-11\\2DPlat\\2DPlat-699996.pt"
+                ]
+            },
+            {
+                "steps": 799997,
+                "file_path": "results\\2DPlatLevel1TIMEGapTraining-10-11\\2DPlat\\2DPlat-799997.onnx",
+                "reward": 0.7545271629778671,
+                "creation_time": 1639184907.0869534,
+                "auxillary_file_paths": [
+                    "results\\2DPlatLevel1TIMEGapTraining-10-11\\2DPlat\\2DPlat-799997.pt"
+                ]
+            },
+            {
+                "steps": 899991,
+                "file_path": "results\\2DPlatLevel1TIMEGapTraining-10-11\\2DPlat\\2DPlat-899991.onnx",
+                "reward": 0.7955232909860859,
+                "creation_time": 1639185132.980544,
+                "auxillary_file_paths": [
+                    "results\\2DPlatLevel1TIMEGapTraining-10-11\\2DPlat\\2DPlat-899991.pt"
+                ]
+            },
+            {
+                "steps": 999993,
+                "file_path": "results\\2DPlatLevel1TIMEGapTraining-10-11\\2DPlat\\2DPlat-999993.onnx",
+                "reward": 0.7790157845868152,
+                "creation_time": 1639185394.567,
+                "auxillary_file_paths": [
+                    "results\\2DPlatLevel1TIMEGapTraining-10-11\\2DPlat\\2DPlat-999993.pt"
+                ]
+            },
+            {
+                "steps": 1000002,
+                "file_path": "results\\2DPlatLevel1TIMEGapTraining-10-11\\2DPlat\\2DPlat-1000002.onnx",
+                "reward": 0.7792207792207793,
+                "creation_time": 1639185394.6677313,
+                "auxillary_file_paths": [
+                    "results\\2DPlatLevel1TIMEGapTraining-10-11\\2DPlat\\2DPlat-1000002.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 1000002,
+            "file_path": "results\\2DPlatLevel1TIMEGapTraining-10-11\\2DPlat.onnx",
+            "reward": 0.7792207792207793,
+            "creation_time": 1639185394.6677313,
+            "auxillary_file_paths": [
+                "results\\2DPlatLevel1TIMEGapTraining-10-11\\2DPlat\\2DPlat-1000002.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.27.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}

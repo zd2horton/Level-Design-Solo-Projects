@@ -1,0 +1,65 @@
+{
+    "2DPlat": {
+        "checkpoints": [
+            {
+                "steps": 699992,
+                "file_path": "results\\2DPlatNovemAlterConfigThreeBlock-36\\2DPlat\\2DPlat-699992.onnx",
+                "reward": 1.0,
+                "creation_time": 1636662326.767549,
+                "auxillary_file_paths": [
+                    "results\\2DPlatNovemAlterConfigThreeBlock-36\\2DPlat\\2DPlat-699992.pt"
+                ]
+            },
+            {
+                "steps": 799980,
+                "file_path": "results\\2DPlatNovemAlterConfigThreeBlock-36\\2DPlat\\2DPlat-799980.onnx",
+                "reward": 1.0,
+                "creation_time": 1636662588.734367,
+                "auxillary_file_paths": [
+                    "results\\2DPlatNovemAlterConfigThreeBlock-36\\2DPlat\\2DPlat-799980.pt"
+                ]
+            },
+            {
+                "steps": 899992,
+                "file_path": "results\\2DPlatNovemAlterConfigThreeBlock-36\\2DPlat\\2DPlat-899992.onnx",
+                "reward": 1.0,
+                "creation_time": 1636662847.820373,
+                "auxillary_file_paths": [
+                    "results\\2DPlatNovemAlterConfigThreeBlock-36\\2DPlat\\2DPlat-899992.pt"
+                ]
+            },
+            {
+                "steps": 999992,
+                "file_path": "results\\2DPlatNovemAlterConfigThreeBlock-36\\2DPlat\\2DPlat-999992.onnx",
+                "reward": 1.0,
+                "creation_time": 1636663114.0283148,
+                "auxillary_file_paths": [
+                    "results\\2DPlatNovemAlterConfigThreeBlock-36\\2DPlat\\2DPlat-999992.pt"
+                ]
+            },
+            {
+                "steps": 1000072,
+                "file_path": "results\\2DPlatNovemAlterConfigThreeBlock-36\\2DPlat\\2DPlat-1000072.onnx",
+                "reward": 1.0,
+                "creation_time": 1636663114.1071348,
+                "auxillary_file_paths": [
+                    "results\\2DPlatNovemAlterConfigThreeBlock-36\\2DPlat\\2DPlat-1000072.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 1000072,
+            "file_path": "results\\2DPlatNovemAlterConfigThreeBlock-36\\2DPlat.onnx",
+            "reward": 1.0,
+            "creation_time": 1636663114.1071348,
+            "auxillary_file_paths": [
+                "results\\2DPlatNovemAlterConfigThreeBlock-36\\2DPlat\\2DPlat-1000072.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.27.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}

@@ -1,0 +1,67 @@
+default_settings: null
+behaviors:
+  2DPlat:
+    trainer_type: ppo
+    hyperparameters:
+      batch_size: 512
+      buffer_size: 15000
+      learning_rate: 0.0007
+      beta: 0.003
+      epsilon: 0.2
+      lambd: 0.95
+      num_epoch: 4
+      learning_rate_schedule: linear
+    network_settings:
+      normalize: false
+      hidden_units: 256
+      num_layers: 2
+      vis_encode_type: simple
+      memory: null
+      goal_conditioning_type: hyper
+    reward_signals:
+      extrinsic:
+        gamma: 0.99
+        strength: 1.0
+        network_settings:
+          normalize: false
+          hidden_units: 256
+          num_layers: 2
+          vis_encode_type: simple
+          memory: null
+          goal_conditioning_type: hyper
+    init_path: results\RAYMOVEREWARD2DPlatGap3Wide-37-35RANDOM\2DPlat
+    keep_checkpoints: 5
+    checkpoint_interval: 100000
+    max_steps: 1000000
+    time_horizon: 64
+    summary_freq: 50000
+    threaded: false
+    self_play: null
+    behavioral_cloning: null
+env_settings:
+  env_path: null
+  env_args: null
+  base_port: 5005
+  num_envs: 1
+  seed: -1
+engine_settings:
+  width: 84
+  height: 84
+  quality_level: 5
+  time_scale: 20
+  target_frame_rate: -1
+  capture_frame_rate: 60
+  no_graphics: false
+environment_parameters: null
+checkpoint_settings:
+  run_id: RAYMOVEREWARD2DPlatGap3Wide-37-35RANDOMTRY2
+  initialize_from: RAYMOVEREWARD2DPlatGap3Wide-37-35RANDOM
+  load_model: false
+  resume: false
+  force: false
+  train_model: false
+  inference: false
+  results_dir: results
+torch_settings:
+  device: null
+debug: false

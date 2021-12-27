@@ -12,6 +12,7 @@ TagManager:
   - DeathPlane
   - Goal
   - GetThis
+  - CheckpointCoin
   layers:
   - Default
   - TransparentFX
@@ -24,7 +25,7 @@ TagManager:
   - Ground
   - Player
   - Enemy
-  - 
+  - Collectables
   - 
   - 
   - 

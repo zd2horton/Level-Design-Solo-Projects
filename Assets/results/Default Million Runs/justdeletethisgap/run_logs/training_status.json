@@ -1,0 +1,65 @@
+{
+    "2DPlat": {
+        "checkpoints": [
+            {
+                "steps": 699996,
+                "file_path": "results\\justdeletethisgap\\2DPlat\\2DPlat-699996.onnx",
+                "reward": 0.18562874251497005,
+                "creation_time": 1636938410.299697,
+                "auxillary_file_paths": [
+                    "results\\justdeletethisgap\\2DPlat\\2DPlat-699996.pt"
+                ]
+            },
+            {
+                "steps": 799992,
+                "file_path": "results\\justdeletethisgap\\2DPlat\\2DPlat-799992.onnx",
+                "reward": -0.38461538461538464,
+                "creation_time": 1636938770.348671,
+                "auxillary_file_paths": [
+                    "results\\justdeletethisgap\\2DPlat\\2DPlat-799992.pt"
+                ]
+            },
+            {
+                "steps": 899996,
+                "file_path": "results\\justdeletethisgap\\2DPlat\\2DPlat-899996.onnx",
+                "reward": 0.09565217391304348,
+                "creation_time": 1636939143.0725648,
+                "auxillary_file_paths": [
+                    "results\\justdeletethisgap\\2DPlat\\2DPlat-899996.pt"
+                ]
+            },
+            {
+                "steps": 999993,
+                "file_path": "results\\justdeletethisgap\\2DPlat\\2DPlat-999993.onnx",
+                "reward": 0.03289473684210526,
+                "creation_time": 1636939512.9386022,
+                "auxillary_file_paths": [
+                    "results\\justdeletethisgap\\2DPlat\\2DPlat-999993.pt"
+                ]
+            },
+            {
+                "steps": 1000004,
+                "file_path": "results\\justdeletethisgap\\2DPlat\\2DPlat-1000004.onnx",
+                "reward": 0.036065573770491806,
+                "creation_time": 1636939513.008416,
+                "auxillary_file_paths": [
+                    "results\\justdeletethisgap\\2DPlat\\2DPlat-1000004.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 1000004,
+            "file_path": "results\\justdeletethisgap\\2DPlat.onnx",
+            "reward": 0.036065573770491806,
+            "creation_time": 1636939513.008416,
+            "auxillary_file_paths": [
+                "results\\justdeletethisgap\\2DPlat\\2DPlat-1000004.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.27.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}

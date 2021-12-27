@@ -1,0 +1,65 @@
+{
+    "2DPlat": {
+        "checkpoints": [
+            {
+                "steps": 699979,
+                "file_path": "results\\RAYMOVEREWARD2DPlatGap3Wide-37-35RANDOMTRY3\\2DPlat\\2DPlat-699979.onnx",
+                "reward": 0.7503217503217503,
+                "creation_time": 1637465441.9414861,
+                "auxillary_file_paths": [
+                    "results\\RAYMOVEREWARD2DPlatGap3Wide-37-35RANDOMTRY3\\2DPlat\\2DPlat-699979.pt"
+                ]
+            },
+            {
+                "steps": 799997,
+                "file_path": "results\\RAYMOVEREWARD2DPlatGap3Wide-37-35RANDOMTRY3\\2DPlat\\2DPlat-799997.onnx",
+                "reward": 0.7065217391304348,
+                "creation_time": 1637465934.9832299,
+                "auxillary_file_paths": [
+                    "results\\RAYMOVEREWARD2DPlatGap3Wide-37-35RANDOMTRY3\\2DPlat\\2DPlat-799997.pt"
+                ]
+            },
+            {
+                "steps": 899999,
+                "file_path": "results\\RAYMOVEREWARD2DPlatGap3Wide-37-35RANDOMTRY3\\2DPlat\\2DPlat-899999.onnx",
+                "reward": 0.6927038626609442,
+                "creation_time": 1637466432.1924348,
+                "auxillary_file_paths": [
+                    "results\\RAYMOVEREWARD2DPlatGap3Wide-37-35RANDOMTRY3\\2DPlat\\2DPlat-899999.pt"
+                ]
+            },
+            {
+                "steps": 999991,
+                "file_path": "results\\RAYMOVEREWARD2DPlatGap3Wide-37-35RANDOMTRY3\\2DPlat\\2DPlat-999991.onnx",
+                "reward": 0.7139107611548556,
+                "creation_time": 1637466927.5721824,
+                "auxillary_file_paths": [
+                    "results\\RAYMOVEREWARD2DPlatGap3Wide-37-35RANDOMTRY3\\2DPlat\\2DPlat-999991.pt"
+                ]
+            },
+            {
+                "steps": 1000001,
+                "file_path": "results\\RAYMOVEREWARD2DPlatGap3Wide-37-35RANDOMTRY3\\2DPlat\\2DPlat-1000001.onnx",
+                "reward": 0.7142857142857143,
+                "creation_time": 1637466927.6569555,
+                "auxillary_file_paths": [
+                    "results\\RAYMOVEREWARD2DPlatGap3Wide-37-35RANDOMTRY3\\2DPlat\\2DPlat-1000001.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 1000001,
+            "file_path": "results\\RAYMOVEREWARD2DPlatGap3Wide-37-35RANDOMTRY3\\2DPlat.onnx",
+            "reward": 0.7142857142857143,
+            "creation_time": 1637466927.6569555,
+            "auxillary_file_paths": [
+                "results\\RAYMOVEREWARD2DPlatGap3Wide-37-35RANDOMTRY3\\2DPlat\\2DPlat-1000001.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.27.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}

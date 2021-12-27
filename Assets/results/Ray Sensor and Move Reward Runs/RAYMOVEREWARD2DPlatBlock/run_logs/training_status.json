@@ -1,0 +1,65 @@
+{
+    "2DPlat": {
+        "checkpoints": [
+            {
+                "steps": 699998,
+                "file_path": "results\\RAYMOVEREWARD2DPlatBlock\\2DPlat\\2DPlat-699998.onnx",
+                "reward": 1.0,
+                "creation_time": 1637387162.9249618,
+                "auxillary_file_paths": [
+                    "results\\RAYMOVEREWARD2DPlatBlock\\2DPlat\\2DPlat-699998.pt"
+                ]
+            },
+            {
+                "steps": 799992,
+                "file_path": "results\\RAYMOVEREWARD2DPlatBlock\\2DPlat\\2DPlat-799992.onnx",
+                "reward": 1.0,
+                "creation_time": 1637387465.392713,
+                "auxillary_file_paths": [
+                    "results\\RAYMOVEREWARD2DPlatBlock\\2DPlat\\2DPlat-799992.pt"
+                ]
+            },
+            {
+                "steps": 899991,
+                "file_path": "results\\RAYMOVEREWARD2DPlatBlock\\2DPlat\\2DPlat-899991.onnx",
+                "reward": 1.0,
+                "creation_time": 1637387766.9431598,
+                "auxillary_file_paths": [
+                    "results\\RAYMOVEREWARD2DPlatBlock\\2DPlat\\2DPlat-899991.pt"
+                ]
+            },
+            {
+                "steps": 999996,
+                "file_path": "results\\RAYMOVEREWARD2DPlatBlock\\2DPlat\\2DPlat-999996.onnx",
+                "reward": 1.0,
+                "creation_time": 1637388075.6706252,
+                "auxillary_file_paths": [
+                    "results\\RAYMOVEREWARD2DPlatBlock\\2DPlat\\2DPlat-999996.pt"
+                ]
+            },
+            {
+                "steps": 1000008,
+                "file_path": "results\\RAYMOVEREWARD2DPlatBlock\\2DPlat\\2DPlat-1000008.onnx",
+                "reward": 1.0,
+                "creation_time": 1637388075.7444139,
+                "auxillary_file_paths": [
+                    "results\\RAYMOVEREWARD2DPlatBlock\\2DPlat\\2DPlat-1000008.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 1000008,
+            "file_path": "results\\RAYMOVEREWARD2DPlatBlock\\2DPlat.onnx",
+            "reward": 1.0,
+            "creation_time": 1637388075.7444139,
+            "auxillary_file_paths": [
+                "results\\RAYMOVEREWARD2DPlatBlock\\2DPlat\\2DPlat-1000008.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.27.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}

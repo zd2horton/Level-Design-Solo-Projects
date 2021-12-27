@@ -1,0 +1,65 @@
+{
+    "2DPlat": {
+        "checkpoints": [
+            {
+                "steps": 699998,
+                "file_path": "results\\help\\2DPlat\\2DPlat-699998.onnx",
+                "reward": 1.0,
+                "creation_time": 1636870194.1560533,
+                "auxillary_file_paths": [
+                    "results\\help\\2DPlat\\2DPlat-699998.pt"
+                ]
+            },
+            {
+                "steps": 799996,
+                "file_path": "results\\help\\2DPlat\\2DPlat-799996.onnx",
+                "reward": 1.0,
+                "creation_time": 1636870527.6154842,
+                "auxillary_file_paths": [
+                    "results\\help\\2DPlat\\2DPlat-799996.pt"
+                ]
+            },
+            {
+                "steps": 899998,
+                "file_path": "results\\help\\2DPlat\\2DPlat-899998.onnx",
+                "reward": 1.0,
+                "creation_time": 1636870834.126243,
+                "auxillary_file_paths": [
+                    "results\\help\\2DPlat\\2DPlat-899998.pt"
+                ]
+            },
+            {
+                "steps": 999993,
+                "file_path": "results\\help\\2DPlat\\2DPlat-999993.onnx",
+                "reward": 1.0,
+                "creation_time": 1636871121.8336897,
+                "auxillary_file_paths": [
+                    "results\\help\\2DPlat\\2DPlat-999993.pt"
+                ]
+            },
+            {
+                "steps": 1000017,
+                "file_path": "results\\help\\2DPlat\\2DPlat-1000017.onnx",
+                "reward": 1.0,
+                "creation_time": 1636871121.941987,
+                "auxillary_file_paths": [
+                    "results\\help\\2DPlat\\2DPlat-1000017.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 1000017,
+            "file_path": "results\\help\\2DPlat.onnx",
+            "reward": 1.0,
+            "creation_time": 1636871121.941987,
+            "auxillary_file_paths": [
+                "results\\help\\2DPlat\\2DPlat-1000017.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.27.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}

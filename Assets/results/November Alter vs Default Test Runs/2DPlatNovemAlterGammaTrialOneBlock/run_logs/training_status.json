@@ -1,0 +1,56 @@
+{
+    "2DPlat": {
+        "checkpoints": [
+            {
+                "steps": 99989,
+                "file_path": "results\\2DPlatNovemAlterGammaTrialOneBlock\\2DPlat\\2DPlat-99989.onnx",
+                "reward": -1.0,
+                "creation_time": 1636865013.763788,
+                "auxillary_file_paths": [
+                    "results\\2DPlatNovemAlterGammaTrialOneBlock\\2DPlat\\2DPlat-99989.pt"
+                ]
+            },
+            {
+                "steps": 199987,
+                "file_path": "results\\2DPlatNovemAlterGammaTrialOneBlock\\2DPlat\\2DPlat-199987.onnx",
+                "reward": -1.0,
+                "creation_time": 1636865280.5785768,
+                "auxillary_file_paths": [
+                    "results\\2DPlatNovemAlterGammaTrialOneBlock\\2DPlat\\2DPlat-199987.pt"
+                ]
+            },
+            {
+                "steps": 299987,
+                "file_path": "results\\2DPlatNovemAlterGammaTrialOneBlock\\2DPlat\\2DPlat-299987.onnx",
+                "reward": -1.0,
+                "creation_time": 1636865571.5584397,
+                "auxillary_file_paths": [
+                    "results\\2DPlatNovemAlterGammaTrialOneBlock\\2DPlat\\2DPlat-299987.pt"
+                ]
+            },
+            {
+                "steps": 382501,
+                "file_path": "results\\2DPlatNovemAlterGammaTrialOneBlock\\2DPlat\\2DPlat-382501.onnx",
+                "reward": -1.0,
+                "creation_time": 1636865797.2220042,
+                "auxillary_file_paths": [
+                    "results\\2DPlatNovemAlterGammaTrialOneBlock\\2DPlat\\2DPlat-382501.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 382501,
+            "file_path": "results\\2DPlatNovemAlterGammaTrialOneBlock\\2DPlat.onnx",
+            "reward": -1.0,
+            "creation_time": 1636865797.2220042,
+            "auxillary_file_paths": [
+                "results\\2DPlatNovemAlterGammaTrialOneBlock\\2DPlat\\2DPlat-382501.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.27.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}

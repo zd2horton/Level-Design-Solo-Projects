@@ -1,0 +1,65 @@
+{
+    "2DPlat": {
+        "checkpoints": [
+            {
+                "steps": 699982,
+                "file_path": "results\\2DPlatLevel1TIMEPart3RETRY\\2DPlat\\2DPlat-699982.onnx",
+                "reward": 0.7084415911080001,
+                "creation_time": 1639347764.3799384,
+                "auxillary_file_paths": [
+                    "results\\2DPlatLevel1TIMEPart3RETRY\\2DPlat\\2DPlat-699982.pt"
+                ]
+            },
+            {
+                "steps": 799969,
+                "file_path": "results\\2DPlatLevel1TIMEPart3RETRY\\2DPlat\\2DPlat-799969.onnx",
+                "reward": 0.8964286063398633,
+                "creation_time": 1639347991.0615952,
+                "auxillary_file_paths": [
+                    "results\\2DPlatLevel1TIMEPart3RETRY\\2DPlat\\2DPlat-799969.pt"
+                ]
+            },
+            {
+                "steps": 899943,
+                "file_path": "results\\2DPlatLevel1TIMEPart3RETRY\\2DPlat\\2DPlat-899943.onnx",
+                "reward": 0.6679325205615804,
+                "creation_time": 1639348199.2921147,
+                "auxillary_file_paths": [
+                    "results\\2DPlatLevel1TIMEPart3RETRY\\2DPlat\\2DPlat-899943.pt"
+                ]
+            },
+            {
+                "steps": 999989,
+                "file_path": "results\\2DPlatLevel1TIMEPart3RETRY\\2DPlat\\2DPlat-999989.onnx",
+                "reward": 0.7835714621203286,
+                "creation_time": 1639348421.7211323,
+                "auxillary_file_paths": [
+                    "results\\2DPlatLevel1TIMEPart3RETRY\\2DPlat\\2DPlat-999989.pt"
+                ]
+            },
+            {
+                "steps": 1000048,
+                "file_path": "results\\2DPlatLevel1TIMEPart3RETRY\\2DPlat\\2DPlat-1000048.onnx",
+                "reward": 0.7865248563441825,
+                "creation_time": 1639348421.8281593,
+                "auxillary_file_paths": [
+                    "results\\2DPlatLevel1TIMEPart3RETRY\\2DPlat\\2DPlat-1000048.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 1000048,
+            "file_path": "results\\2DPlatLevel1TIMEPart3RETRY\\2DPlat.onnx",
+            "reward": 0.7865248563441825,
+            "creation_time": 1639348421.8281593,
+            "auxillary_file_paths": [
+                "results\\2DPlatLevel1TIMEPart3RETRY\\2DPlat\\2DPlat-1000048.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.27.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}

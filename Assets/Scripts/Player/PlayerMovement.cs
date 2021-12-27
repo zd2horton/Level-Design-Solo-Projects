@@ -7,13 +7,15 @@ public class PlayerMovement : MonoBehaviour
 {
     private float speed, jumpModifier, fireTimer, wallJumpTimer, previousPlayerDir;
     private bool canDoubleJump, isWallSliding, canWallJump;
-    public bool firePower, jumpPower, pressedJump;
+    public bool firePower, jumpPower, pressedJump, pressedRun;
     public float horizontal, vertical;
 
     private Rigidbody2D playerRigid;
-    private BoxCollider2D playerBox;
-    private LayerMask groundLayerMask;
+    public BoxCollider2D playerBox;
+    public LayerMask groundLayerMask;
     private SpriteRenderer playerRender;
+
+    public int playerXDir = 0;
 
     private Animator anim;
 
@@ -145,7 +147,7 @@ public class PlayerMovement : MonoBehaviour
             }
         }
         
-        switch (Input.GetButton("Run"))
+        switch (Input.GetButton("Run") || pressedRun == true)
         {
             case true:
                 speed = 8.5f;
@@ -166,7 +168,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void WallMovement()
     {
-        int playerXDir = 0;
+        playerXDir = 0;
 
         switch (Convert.ToInt32(GetComponent<SpriteRenderer>().flipX))
         {

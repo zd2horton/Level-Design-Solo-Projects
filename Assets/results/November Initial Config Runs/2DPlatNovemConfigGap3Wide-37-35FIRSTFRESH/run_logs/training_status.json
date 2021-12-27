@@ -1,0 +1,65 @@
+{
+    "2DPlat": {
+        "checkpoints": [
+            {
+                "steps": 699990,
+                "file_path": "results\\2DPlatNovemConfigGap3Wide-37-35FIRSTFRESH\\2DPlat\\2DPlat-699990.onnx",
+                "reward": 1.0,
+                "creation_time": 1636588502.2961588,
+                "auxillary_file_paths": [
+                    "results\\2DPlatNovemConfigGap3Wide-37-35FIRSTFRESH\\2DPlat\\2DPlat-699990.pt"
+                ]
+            },
+            {
+                "steps": 799990,
+                "file_path": "results\\2DPlatNovemConfigGap3Wide-37-35FIRSTFRESH\\2DPlat\\2DPlat-799990.onnx",
+                "reward": 1.0,
+                "creation_time": 1636588898.5020092,
+                "auxillary_file_paths": [
+                    "results\\2DPlatNovemConfigGap3Wide-37-35FIRSTFRESH\\2DPlat\\2DPlat-799990.pt"
+                ]
+            },
+            {
+                "steps": 899990,
+                "file_path": "results\\2DPlatNovemConfigGap3Wide-37-35FIRSTFRESH\\2DPlat\\2DPlat-899990.onnx",
+                "reward": 1.0,
+                "creation_time": 1636589300.2875955,
+                "auxillary_file_paths": [
+                    "results\\2DPlatNovemConfigGap3Wide-37-35FIRSTFRESH\\2DPlat\\2DPlat-899990.pt"
+                ]
+            },
+            {
+                "steps": 999990,
+                "file_path": "results\\2DPlatNovemConfigGap3Wide-37-35FIRSTFRESH\\2DPlat\\2DPlat-999990.onnx",
+                "reward": 1.0,
+                "creation_time": 1636589720.2483394,
+                "auxillary_file_paths": [
+                    "results\\2DPlatNovemConfigGap3Wide-37-35FIRSTFRESH\\2DPlat\\2DPlat-999990.pt"
+                ]
+            },
+            {
+                "steps": 1000088,
+                "file_path": "results\\2DPlatNovemConfigGap3Wide-37-35FIRSTFRESH\\2DPlat\\2DPlat-1000088.onnx",
+                "reward": 1.0,
+                "creation_time": 1636589720.3381429,
+                "auxillary_file_paths": [
+                    "results\\2DPlatNovemConfigGap3Wide-37-35FIRSTFRESH\\2DPlat\\2DPlat-1000088.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 1000088,
+            "file_path": "results\\2DPlatNovemConfigGap3Wide-37-35FIRSTFRESH\\2DPlat.onnx",
+            "reward": 1.0,
+            "creation_time": 1636589720.3381429,
+            "auxillary_file_paths": [
+                "results\\2DPlatNovemConfigGap3Wide-37-35FIRSTFRESH\\2DPlat\\2DPlat-1000088.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.27.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}

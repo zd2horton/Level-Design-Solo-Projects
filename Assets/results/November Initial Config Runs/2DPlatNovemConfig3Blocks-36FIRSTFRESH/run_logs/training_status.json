@@ -1,0 +1,65 @@
+{
+    "2DPlat": {
+        "checkpoints": [
+            {
+                "steps": 699997,
+                "file_path": "results\\2DPlatNovemConfig3Blocks-36FIRSTFRESH\\2DPlat\\2DPlat-699997.onnx",
+                "reward": 1.0,
+                "creation_time": 1636582752.5208247,
+                "auxillary_file_paths": [
+                    "results\\2DPlatNovemConfig3Blocks-36FIRSTFRESH\\2DPlat\\2DPlat-699997.pt"
+                ]
+            },
+            {
+                "steps": 799997,
+                "file_path": "results\\2DPlatNovemConfig3Blocks-36FIRSTFRESH\\2DPlat\\2DPlat-799997.onnx",
+                "reward": 1.0,
+                "creation_time": 1636583013.3773293,
+                "auxillary_file_paths": [
+                    "results\\2DPlatNovemConfig3Blocks-36FIRSTFRESH\\2DPlat\\2DPlat-799997.pt"
+                ]
+            },
+            {
+                "steps": 899997,
+                "file_path": "results\\2DPlatNovemConfig3Blocks-36FIRSTFRESH\\2DPlat\\2DPlat-899997.onnx",
+                "reward": 1.0,
+                "creation_time": 1636583279.6717405,
+                "auxillary_file_paths": [
+                    "results\\2DPlatNovemConfig3Blocks-36FIRSTFRESH\\2DPlat\\2DPlat-899997.pt"
+                ]
+            },
+            {
+                "steps": 999997,
+                "file_path": "results\\2DPlatNovemConfig3Blocks-36FIRSTFRESH\\2DPlat\\2DPlat-999997.onnx",
+                "reward": 1.0,
+                "creation_time": 1636583552.0817802,
+                "auxillary_file_paths": [
+                    "results\\2DPlatNovemConfig3Blocks-36FIRSTFRESH\\2DPlat\\2DPlat-999997.pt"
+                ]
+            },
+            {
+                "steps": 1000057,
+                "file_path": "results\\2DPlatNovemConfig3Blocks-36FIRSTFRESH\\2DPlat\\2DPlat-1000057.onnx",
+                "reward": 1.0,
+                "creation_time": 1636583552.1715386,
+                "auxillary_file_paths": [
+                    "results\\2DPlatNovemConfig3Blocks-36FIRSTFRESH\\2DPlat\\2DPlat-1000057.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 1000057,
+            "file_path": "results\\2DPlatNovemConfig3Blocks-36FIRSTFRESH\\2DPlat.onnx",
+            "reward": 1.0,
+            "creation_time": 1636583552.1715386,
+            "auxillary_file_paths": [
+                "results\\2DPlatNovemConfig3Blocks-36FIRSTFRESH\\2DPlat\\2DPlat-1000057.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.27.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}

@@ -1,0 +1,40 @@
+default_settings: null
+behaviors:
+  2DPlat:
+    trainer_type: ppo
+    hyperparameters:
+      batch_size: 256 #cont: 1000s discrete: 10s
+      buffer_size: 10240 #ppo: # experiences collected before learning/updating model, large = stable
+      learning_rate: 0.0001 #decrease if training unstable and no consist increasing reward
+      beta: 0.001 #makes sure agents explore action space, increase = random actions
+      epsilon: 0.2 #how rapidly policy evolves, small = more stable but slower
+      lambd: 0.95 #how much relying on current value estimate, high relyies more on rewards in environment
+      num_epoch: 3 # larger with batch size, decreasing = more stable but slower
+      learning_rate_schedule: linear #linear or constant
+    network_settings:
+      normalize: false #good for continuous complex
+      hidden_units: 256 ## of units in hidden layers of NN, how many in each fully connected layer. small for easy, large for complex
+      num_layers: 2 #hidden layers in NN, layers present after obs. input. more for complex
+      vis_encode_type: simple
+      memory: null
+      goal_conditioning_type: hyper
+    reward_signals:
+      extrinsic:
+        gamma: 0.9 #discount factor for future rewards, how far into future agent should care about rewards, large for when should be acting in present for prep, immediate rewards smaller
+        strength: 1.0 #multiply reward given by environment
+        network_settings:
+          normalize: false #good for continuous complex
+          hidden_units: 256
+          num_layers: 2
+          vis_encode_type: simple
+          memory: null
+          goal_conditioning_type: hyper
+    init_path: null
+    keep_checkpoints: 5
+    checkpoint_interval: 100000
+    max_steps: 1000000
+    time_horizon: 32 #steps to collect before adding to experience buffer, small due to frequent rewards or large episode
+    summary_freq: 50000
+    threaded: false
+    self_play: null
+    behavioral_cloning: null

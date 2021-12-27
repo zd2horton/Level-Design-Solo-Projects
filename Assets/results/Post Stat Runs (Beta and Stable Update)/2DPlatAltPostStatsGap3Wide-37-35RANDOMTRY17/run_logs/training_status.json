@@ -1,0 +1,65 @@
+{
+    "2DPlat": {
+        "checkpoints": [
+            {
+                "steps": 699990,
+                "file_path": "results\\2DPlatAltPostStatsGap3Wide-37-35RANDOMTRY17\\2DPlat\\2DPlat-699990.onnx",
+                "reward": 0.9737704918032787,
+                "creation_time": 1638161960.5953224,
+                "auxillary_file_paths": [
+                    "results\\2DPlatAltPostStatsGap3Wide-37-35RANDOMTRY17\\2DPlat\\2DPlat-699990.pt"
+                ]
+            },
+            {
+                "steps": 799991,
+                "file_path": "results\\2DPlatAltPostStatsGap3Wide-37-35RANDOMTRY17\\2DPlat\\2DPlat-799991.onnx",
+                "reward": 0.9762611275964391,
+                "creation_time": 1638162274.4102914,
+                "auxillary_file_paths": [
+                    "results\\2DPlatAltPostStatsGap3Wide-37-35RANDOMTRY17\\2DPlat\\2DPlat-799991.pt"
+                ]
+            },
+            {
+                "steps": 899999,
+                "file_path": "results\\2DPlatAltPostStatsGap3Wide-37-35RANDOMTRY17\\2DPlat\\2DPlat-899999.onnx",
+                "reward": 0.9784560143626571,
+                "creation_time": 1638162591.7993844,
+                "auxillary_file_paths": [
+                    "results\\2DPlatAltPostStatsGap3Wide-37-35RANDOMTRY17\\2DPlat\\2DPlat-899999.pt"
+                ]
+            },
+            {
+                "steps": 999997,
+                "file_path": "results\\2DPlatAltPostStatsGap3Wide-37-35RANDOMTRY17\\2DPlat\\2DPlat-999997.onnx",
+                "reward": 0.9894598155467721,
+                "creation_time": 1638162906.0090337,
+                "auxillary_file_paths": [
+                    "results\\2DPlatAltPostStatsGap3Wide-37-35RANDOMTRY17\\2DPlat\\2DPlat-999997.pt"
+                ]
+            },
+            {
+                "steps": 1000025,
+                "file_path": "results\\2DPlatAltPostStatsGap3Wide-37-35RANDOMTRY17\\2DPlat\\2DPlat-1000025.onnx",
+                "reward": 0.9868421052631579,
+                "creation_time": 1638162906.0808501,
+                "auxillary_file_paths": [
+                    "results\\2DPlatAltPostStatsGap3Wide-37-35RANDOMTRY17\\2DPlat\\2DPlat-1000025.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 1000025,
+            "file_path": "results\\2DPlatAltPostStatsGap3Wide-37-35RANDOMTRY17\\2DPlat.onnx",
+            "reward": 0.9868421052631579,
+            "creation_time": 1638162906.0808501,
+            "auxillary_file_paths": [
+                "results\\2DPlatAltPostStatsGap3Wide-37-35RANDOMTRY17\\2DPlat\\2DPlat-1000025.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.27.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}
