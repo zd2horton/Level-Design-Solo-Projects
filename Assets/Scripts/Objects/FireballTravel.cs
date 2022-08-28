@@ -52,7 +52,6 @@ public class FireballTravel : MonoBehaviour
             newVeloVector = Vector2.Reflect(normalisedCurrent, normalisedSurface);
             ballRigid.velocity = newVeloVector * speed;
         }
-        //Debug.Log(collision.gameObject.layer);
 
         if (collision.gameObject.layer == LayerMask.NameToLayer("Enemy"))
         {

@@ -14,7 +14,7 @@ public class CollectablesScript : MonoBehaviour
     private PlayerController playerCont;
     void Start()
     {
-        player = gameObject; /*GameObject.FindGameObjectWithTag("Player")*/;
+        player = gameObject;
         playerMove = player.GetComponent<PlayerMovement>();
         playerCont = player.GetComponent<PlayerController>();
         livesText = UICanvas.gameObject.transform.GetChild(1).GetComponent<TextMeshProUGUI>();
@@ -45,7 +45,6 @@ public class CollectablesScript : MonoBehaviour
             }
 
             playerCont.score += 200;
-            //Destroy(collision.gameObject);
             collision.gameObject.SetActive(false);
         }
 

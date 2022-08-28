@@ -44,7 +44,6 @@ public class PlayerController : MonoBehaviour
             anim.SetLayerWeight(1, 0);
             Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Enemy"), false);
         }
-        //Debug.Log(health);
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -54,15 +53,9 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Hurtbox")
-        {
-            Destroy(collision.gameObject.transform.parent);
-        }
-
-        else if (collision.gameObject.tag == "Enemy" && invinciblePeriod == false)
+        if (collision.gameObject.tag == "Enemy" && invinciblePeriod == false)
         {
             Debug.DrawLine(collision.GetContact(0).point, collision.GetContact(0).point + collision.GetContact(0).normal, Color.black, 10);
-            //Debug.Log(collision.GetContact(0).normal);
 
             if (collision.GetContact(0).normal.y != 1.0f)
             {
@@ -86,23 +79,6 @@ public class PlayerController : MonoBehaviour
     {
         switch (health)
         {
-
-            //case -1:
-            //    //transform.position = initialPos;
-            //    lives--;
-            //    health = 3;
-            //    playerRender.color = Color.green;
-            //    //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-            //    break;
-
-            //case 0:
-            //    //transform.position = initialPos;
-            //    lives--;
-            //    health = 3;
-            //    playerRender.color = Color.green;
-            //    //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-            //    break;
-
             case 1:
                 playerRender.color = Color.red;
                 break;

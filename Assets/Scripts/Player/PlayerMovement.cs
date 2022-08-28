@@ -152,12 +152,10 @@ public class PlayerMovement : MonoBehaviour
             case true:
                 speed = 8.5f;
                 anim.speed = 1.5f;
-                //jumpModifier = 12.0f;
                 break;
 
             case false:
                 speed = 5.0f;
-               // jumpModifier = 9.85f;
                 anim.speed = 1.0f;
                 break;
         }

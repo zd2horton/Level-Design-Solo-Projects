@@ -33,9 +33,6 @@ public class EnemyClass : MonoBehaviour
             enemyCollide.bounds.center,
             new Vector2(enemyXDir, 0), enemyCollide.bounds.extents.x + 0.1f, groundLayerMask);
 
-        //Debug.DrawRay(enemyCollide.bounds.center,
-            //new Vector3(enemyXDir, 0, 0), Color.blue, 0.01f);
-
         if (leftCast.collider == null)
         {
             enemyRender.flipX = true;
